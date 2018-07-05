@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Configuration status="OFF">
+    <properties>
+        <property name="LOG_DIR">${project.basedir}/logs</property>
+        <!--<property name="log_env">${sys:env:lab}</property>-->
+    </properties>
+    <!--<MarkerFilter marker="FLOW" onMatch="${flow_${log_env}}" onMismatch="NEUTRAL"/>-->
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{ABSOLUTE} %-5level %t # %class.%method %m%n"/>
+        </Console>
+        <!--
+                <RollingFile name="log4j" fileName="${LOG_DIR}/service.log"
+                             filePattern="${LOG_DIR}/archive/service.log.%d{yyyyMMdd_HH}-%i">
+                    <PatternLayout>
+                        <MarkerPatternSelector
+                                defaultPattern="%d [%t] %-5p %X{loginId, ssoActiveProfileId, requestId, sessionId, ipAddress, corpAcctNumber} %C{1.}.%M:%L - %m%n">
+                            <PatternMatch key="FLOW"
+                                          pattern="%d [%t] %-5p %X{loginId, ssoActiveProfileId, requestId, sessionId, ipAddress, corpAcctNumber} &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45; %C{1.}.%M:%L %msg &#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;%n"/>
+                        </MarkerPatternSelector>
+                    </PatternLayout>
+                    <Policies>
+                        <SizeBasedTriggeringPolicy size="30 MB"/>
+                    </Policies>
+                    <DefaultRolloverStrategy min="1" max="20"/>
+                </RollingFile>
+        -->
+    </Appenders>
+    <Loggers>
+
+        <Logger name="org.java.core.concurency" level="DEBUG" additivity="false">
+            <AppenderRef ref="Console"/>
+        </Logger>
+
+        <Root level="INFO">
+            <AppenderRef ref="Console"/>
+        </Root>
+
+    </Loggers>
+</Configuration>
