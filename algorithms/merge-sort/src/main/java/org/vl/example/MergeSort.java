@@ -11,7 +11,7 @@ public class MergeSort {
     private static final Logger LOGGER = LogManager.getLogger(MergeSort.class);
 
     private int[] inputArray;
-    private int[] tempMergeArray;
+    private int[] tempMergeArray; // consider algorithm improvement removing this redundant array
     private int length;
 
     private static int calculateDepth(int x, int base) {
