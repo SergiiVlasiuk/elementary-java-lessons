@@ -1,9 +1,11 @@
 package org.vl.example;
 
-import java.util.Arrays;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+
+import static org.vl.example.util.ArrayUtil.arrayToString;
+import static org.vl.example.util.ArrayUtil.copyRange;
+import static org.vl.example.util.ArrayUtil.printArray;
 
 public class MergeSort {
     private static final Logger LOGGER = LogManager.getLogger(MergeSort.class);
@@ -11,16 +13,6 @@ public class MergeSort {
     private int[] inputArray;
     private int[] tempMergeArray;
     private int length;
-
-    public static void main(String[] args) {
-
-        int[] inputArray = generateInputArray();
-
-        MergeSort ms = new MergeSort();
-        ms.printArray(inputArray);
-        ms.sort(inputArray);
-
-    }
 
     private static int calculateDepth(int x, int base) {
         return (int) Math.ceil((Math.log(x) / Math.log(base)));
@@ -43,14 +35,6 @@ public class MergeSort {
                 mergeArraysDepthBased(shift, j, j + shift);
             }
         }
-    }
-
-    private void printArray(int[] arrayDepthBased) {
-        LOGGER.debug(" {}", arrayToString(arrayDepthBased));
-    }
-
-    private static String arrayToString(int[] array) {
-        return Arrays.toString(Arrays.stream(array).boxed().toArray(Integer[]::new));
     }
 
     /*
@@ -109,26 +93,7 @@ public class MergeSort {
             }
         }
         copyRange(inputArray, tempMergeArray, startShiftFirstArray, maxShiftSecondArray, startShiftFirstArray);
-
         printArray(inputArray);
     }
 
-    private void copyRange(int[] destinationArray,
-                           int[] sourceArray,
-                           int index,
-                           final int maxShiftArray,
-                           int startDestinationIndex) {
-        while (index < maxShiftArray) {
-            destinationArray[startDestinationIndex] = sourceArray[index];
-            index++;
-            startDestinationIndex++;
-        }
-    }
-
-    public static int[] generateInputArray() {
-        java.util.Random r = new java.util.Random();
-        int min = 10;
-        int max = r.nextInt(20) + min;
-        return r.ints(0, max).limit(max).toArray();
-    }
 }

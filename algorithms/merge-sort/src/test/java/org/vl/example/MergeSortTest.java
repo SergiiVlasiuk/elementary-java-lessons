@@ -8,7 +8,7 @@ import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.vl.example.MergeSort.generateInputArray;
+import static org.vl.example.util.ArrayUtil.generateInputArray;
 
 @RunWith(MockitoJUnitRunner.class)
 public class MergeSortTest {
