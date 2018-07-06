@@ -41,4 +41,23 @@ public class ArrayUtil {
         return Arrays.toString(Arrays.stream(array).boxed().toArray(Integer[]::new));
     }
 
+    /**
+     * Calculate tree depth.
+     *
+     * @param x count of collection elements
+     * @return  tree depth
+     */
+    public static int calculateDepth(int x) {
+        return logForBase(x, 2);
+    }
+
+    /**
+     * @param x    elements count
+     * @param base logarithm base
+     * @return     tree depth
+     */
+    public static int logForBase(int x, int base) {
+        return (int) Math.ceil((Math.log(x) / Math.log(base)));
+    }
+
 }

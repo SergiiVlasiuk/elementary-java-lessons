@@ -4,6 +4,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static org.vl.example.util.ArrayUtil.arrayToString;
+import static org.vl.example.util.ArrayUtil.calculateDepth;
 import static org.vl.example.util.ArrayUtil.copyRange;
 import static org.vl.example.util.ArrayUtil.printArray;
 
@@ -14,16 +15,12 @@ public class MergeSort {
     private int[] tempMergeArray; // consider algorithm improvement removing this redundant array
     private int length;
 
-    private static int calculateDepth(int x, int base) {
-        return (int) Math.ceil((Math.log(x) / Math.log(base)));
-    }
-
     public void sort(int[] inputArray) {
         this.inputArray = inputArray;
         this.length = inputArray.length;
         this.tempMergeArray = new int[length];
 
-        int depth = calculateDepth(length, 2);
+        int depth = calculateDepth(length);
         LOGGER.debug("Input tree is: {}", arrayToString(this.inputArray));
         LOGGER.debug("The tree length is: <{}>, the depth is: <{}>.", length, depth);
         for (int i = 0; i < depth; i++) {
