@@ -9,7 +9,7 @@ public class ForkJoinPoolSquareCalculatorMain {
         SquareCalculator squareCalculator = new SquareCalculator();
 
         Future<Integer> future1 = squareCalculator.calculate(10);
-        Future<Integer> future2 = squareCalculator.calculate(100);
+        Future<Integer> future2 = squareCalculator.calculate(500);
 
         while (!(future1.isDone() && future2.isDone()))
 
