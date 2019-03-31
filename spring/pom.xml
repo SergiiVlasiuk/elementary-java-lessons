@@ -14,6 +14,7 @@
         <module>springdatajpasimpleexample</module>
         <module>jks-example</module>
         <module>quartz</module>
+        <module>autoconfigure</module>
     </modules>
 
     <artifactId>spring</artifactId>

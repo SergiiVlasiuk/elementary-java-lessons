@@ -1,0 +1,3 @@
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+    org.vl.example.retryapi.RetryApiAutoConfiguration, \
+    org.vl.example.another.AnotherAutoConfiguration

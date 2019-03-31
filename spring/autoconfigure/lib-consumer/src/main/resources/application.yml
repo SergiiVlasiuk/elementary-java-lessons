@@ -1,0 +1,5 @@
+spring:
+  profiles:
+    include: 'al'
+  application:
+    name: lib-consumer

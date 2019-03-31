@@ -1,0 +1,10 @@
+management:
+  security:
+    enabled: false
+  #http://localhost:9000/actuator/health
+  server:
+    port: 9000
+  endpoints:
+    web:
+      exposure:
+        include: '*'
