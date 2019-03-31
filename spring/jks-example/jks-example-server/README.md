@@ -79,3 +79,9 @@ Certificate was added to keystore
 
 Warning:
 The JKS keystore uses a proprietary format. It is recommended to migrate to PKCS12 which is an industry standard format using "keytool -importkeystore -srckeystore MyServer3.jks -destkeystore MyServer3.jks -deststoretype pkcs12".
+
+
+## export certificate from trusted store
+
+     keytool -exportcert -alias <certificate-trusted-entry> -keystore <trust-store-file> -file <output-certificate-file-name>.crt
+
