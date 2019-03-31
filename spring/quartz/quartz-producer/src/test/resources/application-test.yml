@@ -1,0 +1,6 @@
+## Spring DATASOURCE (DataSourceAutoConfiguration & DataSourceProperties)
+spring:
+  ## QuartzProperties
+  quartz:
+    # this property should be different for different clusters. other case it provides conflicts because of job types
+    scheduler-name: 'quartz-producer'
