@@ -10,8 +10,8 @@ import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.SimpleClientHttpRequestFactory;
 import org.springframework.util.StopWatch;
 import org.springframework.web.client.RestTemplate;
-import org.vl.example.stopwatch.logging.GoogleStopWatchLoggingInterceptor;
-import org.vl.example.stopwatch.logging.SpringStopWatchLoggingInterceptor;
+import org.vl.example.stopwatch.logging.RestTemplateGoogleStopWatchLoggingInterceptor;
+import org.vl.example.stopwatch.logging.RestTemplateSpringStopWatchLoggingInterceptor;
 
 @Configuration
 @ComponentScan({
@@ -22,8 +22,8 @@ public class RestConfig {
 
   @Bean
   RestTemplate restTemplate(
-      SpringStopWatchLoggingInterceptor springStopWatchLoggingInterceptor,
-      GoogleStopWatchLoggingInterceptor googleStopWatchLoggingInterceptor) {
+      RestTemplateSpringStopWatchLoggingInterceptor restTemplateSpringStopWatchLoggingInterceptor,
+      RestTemplateGoogleStopWatchLoggingInterceptor restTemplateGoogleStopWatchLoggingInterceptor) {
     /*
      to cache response
      check next article for more details
@@ -33,9 +33,9 @@ public class RestConfig {
         new SimpleClientHttpRequestFactory());
     RestTemplate restTemplate = new RestTemplate(factory);
     List<ClientHttpRequestInterceptor> interceptors = restTemplate.getInterceptors();
-//    interceptors.add(new RequestResponseLoggingInterceptor());
-//    interceptors.add(springStopWatchLoggingInterceptor);
-    interceptors.add(googleStopWatchLoggingInterceptor);
+//    interceptors.add(new RestTemplateRequestResponseLoggingInterceptor());
+//    interceptors.add(restTemplateSpringStopWatchLoggingInterceptor);
+    interceptors.add(restTemplateGoogleStopWatchLoggingInterceptor);
     restTemplate.setInterceptors(interceptors);
     return restTemplate;
   }

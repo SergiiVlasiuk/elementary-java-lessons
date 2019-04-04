@@ -1,4 +1,4 @@
-package org.vl.example.stopwatch.web;
+package org.vl.example.stopwatch.web.controller;
 
 import java.util.UUID;
 import javax.servlet.http.HttpServletRequest;
@@ -21,11 +21,11 @@ public class HomeController {
 
   @GetMapping
   String home(HttpServletRequest request) {
-    log.info("getRequestURI: {}", request.getRequestURI());
-    log.info("getRequestURL: {}", request.getRequestURL());
-    log.info("getPathInfo: {}", request.getPathInfo());
-    log.info("fromCurrentRequest: {}", ServletUriComponentsBuilder.fromCurrentRequest());
-    log.info("fromCurrentRequestUri: {}", ServletUriComponentsBuilder.fromCurrentRequestUri());
+//    log.info("getRequestURI: {}", request.getRequestURI());
+//    log.info("getRequestURL: {}", request.getRequestURL());
+//    log.info("getPathInfo: {}", request.getPathInfo());
+//    log.info("fromCurrentRequest: {}", ServletUriComponentsBuilder.fromCurrentRequest());
+//    log.info("fromCurrentRequestUri: {}", ServletUriComponentsBuilder.fromCurrentRequestUri());
     return restTemplate
         .getForObject(request.getRequestURL().toString() + "/" + UUID.randomUUID(), String.class);
   }
