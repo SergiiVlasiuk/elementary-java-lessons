@@ -10,7 +10,7 @@ import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.util.StreamUtils;
 
 @Slf4j
-public class RequestResponseLoggingInterceptor implements ClientHttpRequestInterceptor {
+public class RestTemplateRequestResponseLoggingInterceptor implements ClientHttpRequestInterceptor {
 
   @Override
   public ClientHttpResponse intercept(HttpRequest request, byte[] body,

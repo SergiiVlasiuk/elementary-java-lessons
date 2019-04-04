@@ -1,6 +1,5 @@
-package org.vl.example.stopwatch;
+package org.vl.example.stopwatch.dto;
 
-import com.google.common.base.Stopwatch;
 import java.net.URI;
 import javax.validation.constraints.NotNull;
 import lombok.Builder;
@@ -15,9 +14,11 @@ import org.springframework.http.HttpMethod;
 public class RequestData {
 
   @NotNull
-  private URI uri;
-  private HttpMethod method;
-  private HttpHeaders httpHeaders;
-  private Thread thread;
-  private Stopwatch stopwatch;
+  private String url;
+  private String method;
+//  private HttpHeaders httpHeaders;
+//  private Thread thread;
+  private String threadName;
+  private Class clazz;
+//  private String clazz;
 }

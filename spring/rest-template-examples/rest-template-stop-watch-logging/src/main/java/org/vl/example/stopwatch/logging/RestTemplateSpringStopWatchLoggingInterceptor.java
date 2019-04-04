@@ -8,15 +8,15 @@ import org.springframework.http.client.ClientHttpRequestExecution;
 import org.springframework.http.client.ClientHttpRequestInterceptor;
 import org.springframework.http.client.ClientHttpResponse;
 import org.springframework.stereotype.Component;
-import org.vl.example.stopwatch.util.GoogleStopWatchCommunicationService;
 import org.vl.example.stopwatch.util.HttpCommunicationUtil;
+import org.vl.example.stopwatch.util.SpringStopWatchService;
 
 @Component
 @Slf4j
-public class GoogleStopWatchLoggingInterceptor implements ClientHttpRequestInterceptor {
+public class RestTemplateSpringStopWatchLoggingInterceptor implements ClientHttpRequestInterceptor {
 
   @Autowired
-  private GoogleStopWatchCommunicationService googleStopwatchService;
+  private SpringStopWatchService stopWatchService;
 
   @Override
   public ClientHttpResponse intercept(HttpRequest request, byte[] body,
@@ -33,7 +33,7 @@ public class GoogleStopWatchLoggingInterceptor implements ClientHttpRequestInter
   }
 
   private void logRequest(HttpRequest request, byte[] body) throws IOException {
-    googleStopwatchService.start(request);
+    stopWatchService.start(request);
     HttpCommunicationUtil.logRequest(request, body);
   }
 
@@ -43,7 +43,9 @@ public class GoogleStopWatchLoggingInterceptor implements ClientHttpRequestInter
     } catch (InterruptedException e) {
       log.error(e.getLocalizedMessage(), e);
     }
-    googleStopwatchService.stop();
+    stopWatchService.stop();
+    log.info("stop watch id: {}", stopWatchService.getStopWatch().getId());
+    log.info("stop watch details: {}", stopWatchService.getStopWatch().prettyPrint());
 
     HttpCommunicationUtil.logResponse(response);
   }
