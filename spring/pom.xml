@@ -15,6 +15,7 @@
         <module>jks-example</module>
         <module>quartz</module>
         <module>autoconfigure</module>
+        <module>rest-template-examples</module>
     </modules>
 
     <artifactId>spring</artifactId>
