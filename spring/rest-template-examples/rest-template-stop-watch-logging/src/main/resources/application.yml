@@ -1,0 +1,8 @@
+logging:
+  level:
+    web: DEBUG
+    org:
+      quartz: TRACE
+      vl:
+        example:
+          stopwatch: TRACE
