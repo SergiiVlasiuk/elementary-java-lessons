@@ -25,10 +25,14 @@ public class RestTemplateGoogleStopWatchLoggingInterceptor implements ClientHttp
 //    logRequest(request, body);
     log.info("start observing");
     googleStopwatchService.start(request, this.getClass());
-    ClientHttpResponse response = execution.execute(request, body);
+    ClientHttpResponse response;
+    try {
+      response = execution.execute(request, body);
 //    googleStopwatchService.stop(request);
-    logResponse(response);
-    googleStopwatchService.stop(request, this.getClass());
+      logResponse(response);
+    } finally {
+      googleStopwatchService.stop(request, this.getClass());
+    }
     log.info("stop observing");
 
     //Add optional additional headers
