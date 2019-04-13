@@ -16,6 +16,7 @@
         <module>quartz</module>
         <module>autoconfigure</module>
         <module>rest-template-examples</module>
+      <module>cache</module>
     </modules>
 
     <artifactId>spring</artifactId>

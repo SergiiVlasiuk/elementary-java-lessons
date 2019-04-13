@@ -3,9 +3,7 @@ package org.vl.example.stopwatch.web.interceptor;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.ObjectFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -19,15 +17,12 @@ public class RestApiStopWatchLoggingInterceptor extends HandlerInterceptorAdapte
 
   @Autowired
   private GoogleStopWatchHttpRequestService googleStopwatchService;
-//  @Autowired
-//  private ObjectFactory<HttpRequest> httpRequest;
 
   @Override
   public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler)
       throws Exception {
     log.info("preHandle");
     RequestAttributes requestAttributes = RequestContextHolder.currentRequestAttributes();
-//    googleStopwatchService.start(httpRequest.getObject());
     googleStopwatchService.start(request, this.getClass());
     return super.preHandle(request, response, handler);
   }
