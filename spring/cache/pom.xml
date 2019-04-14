@@ -15,6 +15,7 @@
     <module>default-cache</module>
     <module>guava-cache</module>
     <module>cache-info</module>
+    <module>caffeine-cache</module>
   </modules>
 
 
