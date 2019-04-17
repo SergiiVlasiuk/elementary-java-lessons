@@ -8,11 +8,13 @@ import com.github.benmanes.caffeine.cache.RemovalCause;
 import com.github.benmanes.caffeine.cache.RemovalListener;
 import java.util.concurrent.TimeUnit;
 import org.springframework.cache.CacheManager;
+import org.springframework.cache.annotation.EnableCaching;
 import org.springframework.cache.caffeine.CaffeineCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
+@EnableCaching
 public class CacheJavaConfig {
 
   /**
@@ -22,10 +24,8 @@ public class CacheJavaConfig {
   @Bean
   public CacheManager cacheManager() {
     String specAsString = "initialCapacity=100,maximumSize=500,expireAfterAccess=5m,recordStats";
-//    CaffeineCacheManager cacheManager = new CaffeineCacheManager("AIRCRAFTS", "SECOND_CACHE");
     CaffeineCacheManager cacheManager = new CaffeineCacheManager("books");
-    cacheManager.setAllowNullValues(
-        false); //can happen if you get a value from a @Cachable that returns null
+    cacheManager.setAllowNullValues(false); //can happen if you get a value from a @Cachable that returns null
     //cacheManager.setCacheSpecification(specAsString);
     //cacheManager.setCaffeineSpec(caffeineSpec());
     cacheManager.setCaffeine(caffeineCacheBuilder());
@@ -42,7 +42,7 @@ public class CacheJavaConfig {
         .initialCapacity(100)
         .maximumSize(150)
         .expireAfterAccess(5, TimeUnit.MINUTES)
-        .weakKeys()
+//        .weakKeys()
         .removalListener(new CustomRemovalListener())
         .recordStats();
   }

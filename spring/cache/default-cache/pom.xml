@@ -17,13 +17,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <artifactId>default-cache</artifactId>
-  <groupId>org.vl.example</groupId>
+  <groupId>org.vl.example.cache</groupId>
   <version>0.0.1-SNAPSHOT</version>
 
   <dependencies>
 
     <dependency>
-      <groupId>org.vl.example</groupId>
+      <groupId>org.vl.example.cache</groupId>
       <artifactId>cache-info</artifactId>
       <version>0.0.1-SNAPSHOT</version>
 <!--

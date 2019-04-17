@@ -6,22 +6,27 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import org.vl.example.cacheinfo.details.ReportCacheDetails;
 
 @RestController
 @RequestMapping("book")
 @Slf4j
 public class BookController {
 
-  @Autowired
-  private SimpleBookRepository repository;
-  @Autowired
-  private ReportCacheDetails reportCacheDetails;
+    @Autowired
+    private BookRepository repository;
 
-  @GetMapping("{isbn}")
-  Book getBook(@PathVariable String isbn) {
-    log.info("controller: {}", isbn);
-    reportCacheDetails.printCacheInfo();
-    return repository.getByIsbn(isbn);
-  }
+    @GetMapping("tocache/{isbn}")
+    Book getBook(@PathVariable String isbn) {
+        log.info("controller loads data by: {}", isbn);
+//    reportCacheDetails.printCacheInfo();
+        return repository.getByIsbn(isbn);
+    }
+
+    @GetMapping("clean")
+    String getBook() {
+        log.info("controller: clean caches");
+//    reportCacheDetails.printCacheInfo();
+        repository.cleanCaches();
+        return "CLEANED";
+    }
 }

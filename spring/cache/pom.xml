@@ -9,6 +9,7 @@
   </parent>
   <modelVersion>4.0.0</modelVersion>
 
+  <groupId>org.vl.example.cache</groupId>
   <artifactId>cache</artifactId>
   <packaging>pom</packaging>
   <modules>

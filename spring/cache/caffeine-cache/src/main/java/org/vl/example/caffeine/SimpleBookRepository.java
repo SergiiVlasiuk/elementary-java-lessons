@@ -1,33 +1,40 @@
 package org.vl.example.caffeine;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-import org.springframework.cache.annotation.CacheConfig;
-import org.springframework.cache.annotation.CachePut;
-import org.springframework.cache.annotation.Cacheable;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
+
+import static org.apache.commons.lang3.RandomStringUtils.random;
 
 @Component
 //@CacheConfig(cacheNames = "books")
-public class SimpleBookRepository {
+@Slf4j
+public class SimpleBookRepository implements BookRepository {
 
-  private static final Logger logger = LoggerFactory.getLogger(SimpleBookRepository.class);
+    @Autowired
+    private SomeService someService;
 
-
-//  @Cacheable(unless = "#result == null || #isbn == null")
-  @CachePut(cacheNames = "books", key = "#isbn")
-  public Book getByIsbn(String isbn) {
+    public Book getByIsbn(String isbn) {
 //    reportCacheDetails.printCacheInfo();
 
-    logger.info("isbn: {}", isbn);
-    return new Book(isbn, "Some book");
+        log.info("isbn: {}", isbn);
+        someService.someImportantLogic();
+        return new Book(isbn, random(10));
 //    return null;
-  }
+    }
 
-  @Cacheable(cacheNames = "books", key = "#isbn+'_'+#market", unless = "#result == null || #isbn == null || #market == null")
-  public Book getByIsbn(String isbn, String market) {
-    logger.info("isbn: {}", isbn);
-    return new Book(isbn, "Some book  " + market);
-  }
+//    //  @Cacheable(cacheNames = "books", key = "#isbn+'_'+#market", unless = "#result == null || #isbn == null || #market == null")
+//    @Cacheable(value = "books", key = "#isbn+'_'+#market", unless = "#result == null || #isbn == null || #market == null")
+    public Book getByIsbn(String isbn, String market) {
+        log.info("isbn: {}", isbn);
+        someService.someImportantLogic();
+        return new Book(isbn, random(10) + '_' + market);
+    }
+
+//    @CacheEvict(cacheNames = {"books"}, allEntries = true)
+    public void cleanCaches() {
+        log.info("clean caches");
+        someService.someImportantLogic();
+    }
 
 }
