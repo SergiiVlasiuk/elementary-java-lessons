@@ -15,6 +15,7 @@
     <modules>
         <module>concurrency</module>
         <module>inputoutput</module>
+        <module>collections</module>
     </modules>
 
 
