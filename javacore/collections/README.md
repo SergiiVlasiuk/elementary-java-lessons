@@ -1,93 +1,98 @@
 ### ListFillingTest
-
-15:14:19 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.241542157 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.177758611 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.211983942 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.008167448 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.020841972 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.031592187 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.008601867 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.065252332 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.01429886 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.005137968 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.038440461 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.014391816 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.005744351 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.04331857 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.01409176 seconds
+```
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.361637108 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.208685021 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.104951817 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.032323912 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.081418839 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.034327966 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.007430211 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.072084599 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.012796916 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.028057334 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.015112111 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.012963196 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - ArrayList time : 0.022022996 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - LinkedList time : 0.007700938 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListFillingTest:20 - Vector time : 0.013518171 seconds
+```
 
 
 ### ListGettingByIndexTest
-
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 7.454E-6 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.012755108 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 1.506E-6 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 8.92E-7 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.011331191 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 3.297E-6 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 1.0846E-5 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.001952473 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 2.724E-6 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 1.191E-6 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.001865322 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 1.5396E-5 seconds
-15:14:20 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 1.253E-6 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.001755934 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 3.613E-6 seconds
+```
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 1.8084E-5 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.012938036 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 2.719E-6 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 2.126E-6 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.012167612 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 3.301E-6 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 1.992E-6 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.001912997 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 2.961E-6 seconds
+15:17:58 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 2.241E-6 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.002258418 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 2.9E-6 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - ArrayList time : 1.854E-6 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - LinkedList time : 0.002084063 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListGettingByIndexTest:22 - Vector time : 3.227E-6 seconds
+```
 
 
 ### ListContainsObjectInTheMiddleTest
-
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 0.039508628 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.031171005 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 0.029674947 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 7.25294E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.00389435 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 9.30281E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 0.001070826 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.003272229 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 9.1206E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 7.81124E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.003024558 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 8.55633E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 8.87541E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.003292066 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 0.001049748 seconds
+```
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 0.034485991 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.027936366 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 0.027833762 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 8.65644E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.001867602 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 8.438E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 9.28495E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.001632861 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 8.80184E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 8.40385E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.001559066 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 8.09284E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - ArrayList time : 8.51548E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - LinkedList time : 0.001498742 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListContainsObjectInTheMiddleTest:22 - Vector time : 8.45562E-4 seconds
+```
 
 
 ### ListRemovingObjectByIndexFromMiddleTest
-
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.33488E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.002433983 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.39841E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.1658E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.001893049 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.14313E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.10673E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.002043605 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.28861E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.19427E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.002473458 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 3.83447E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 3.52039E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.001959288 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.59361E-4 seconds
+```
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.17322E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.001992148 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.94906E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.56739E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.002244302 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.48487E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 4.05711E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.002207151 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.29319E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.1198E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.002154278 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 2.27263E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - ArrayList time : 2.50273E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - LinkedList time : 0.001784879 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListRemovingObjectByIndexFromMiddleTest:22 - Vector time : 3.09287E-4 seconds
+```
 
 
 ### ListAddObjectByIndexIntoMiddleTest
-
-15:14:21 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.45316E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.001926081 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 3.06698E-4 seconds
-15:14:21 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.34545E-4 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.00205616 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 2.69877E-4 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.98914E-4 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.001764364 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 3.10354E-4 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.23515E-4 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.001918954 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 2.9996E-4 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.86592E-4 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.002090002 seconds
-15:14:22 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 2.4887E-4 seconds
+```
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.89988E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.0023398 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 3.38292E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 3.14528E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.002379602 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 3.308E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.54746E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.001782036 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 6.35234E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.42649E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.001954317 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 3.32487E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - ArrayList time : 2.65146E-4 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - LinkedList time : 0.002321282 seconds
+15:17:59 INFO  [main] o.j.c.c.b.ListAddObjectByIndexIntoMiddleTest:22 - Vector time : 3.06922E-4 seconds
+```

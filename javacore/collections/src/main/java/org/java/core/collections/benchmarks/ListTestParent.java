@@ -22,10 +22,11 @@ public abstract class ListTestParent {
     }
 
     public void process() {
-        System.out.println(String.format("\n\n### %s\n", getClass().getSimpleName()));
+        System.out.println(String.format("\n\n### %s\n```", getClass().getSimpleName()));
         for (int i = 0; i++ < TIMES_TO_EXECUTE; ) {
             execute();
         }
+        System.out.println("```");
     }
 
     abstract public void execute();
