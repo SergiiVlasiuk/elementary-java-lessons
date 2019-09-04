@@ -9,12 +9,8 @@ import java.util.Vector;
 
 @Slf4j
 public class ListAddObjectByIndexIntoMiddleTest extends ListTestParent {
-    public static void main(String[] args) {
-        new ListAddObjectByIndexIntoMiddleTest().process();
-    }
-
     private void testListAddingObjectInTheMiddle(List list, String title) {
-        fillList(list, COUNT);
+        fillList(list);
         int index = COUNT / 2;
         long startNanoTime = getCurrentNanoTime();
         list.add(index, 3);

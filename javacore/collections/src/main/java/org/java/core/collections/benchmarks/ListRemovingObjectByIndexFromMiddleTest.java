@@ -9,12 +9,8 @@ import java.util.Vector;
 
 @Slf4j
 public class ListRemovingObjectByIndexFromMiddleTest extends ListTestParent {
-    public static void main(String[] args) {
-        new ListRemovingObjectByIndexFromMiddleTest().process();
-    }
-
     private void testListRemovingFromMiddleByIndex(List list, String title) {
-        fillList(list, COUNT);
+        fillList(list);
         int index = COUNT / 2;
         long startNanoTime = getCurrentNanoTime();
         list.remove(index);

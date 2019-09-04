@@ -9,12 +9,8 @@ import java.util.Vector;
 
 @Slf4j
 public class ListGettingByIndexTest extends ListTestParent {
-    public static void main(String[] args) {
-        new ListGettingByIndexTest().process();
-    }
-
     private void testListGettingByIndex(List list, String title) {
-        fillList(list, COUNT);
+        fillList(list);
         int index = COUNT / 2;
         long startNanoTime = getCurrentNanoTime();
         list.get(index);

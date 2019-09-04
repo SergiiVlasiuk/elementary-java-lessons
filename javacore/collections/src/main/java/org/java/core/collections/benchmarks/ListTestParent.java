@@ -7,8 +7,8 @@ public abstract class ListTestParent {
     static final int NANO = 1000000000;
     static final int TIMES_TO_EXECUTE = 5;
 
-    void fillList(List<Integer> list, int count) {
-        for (int i = 0; i < count; i++) {
+    void fillList(List<Integer> list) {
+        for (int i = 0; i < ListTestParent.COUNT; i++) {
             list.add(i);
         }
     }

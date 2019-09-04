@@ -9,12 +9,8 @@ import java.util.Vector;
 
 @Slf4j
 public class ListContainsObjectInTheMiddleTest extends ListTestParent {
-    public static void main(String[] args) {
-        new ListContainsObjectInTheMiddleTest().process();
-    }
-
     private void testListContainsObjectInTheMiddle(List list, String title) {
-        fillList(list, COUNT);
+        fillList(list);
         int number = COUNT / 2;
         long startNanoTime = getCurrentNanoTime();
         list.contains(number);

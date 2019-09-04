@@ -9,13 +9,9 @@ import java.util.Vector;
 
 @Slf4j
 public class ListFillingTest extends ListTestParent {
-    public static void main(String[] args) {
-        new ListFillingTest().process();
-    }
-
     private void testListFilling(List list, String title) {
         long startNanoTime = getCurrentNanoTime();
-        fillList(list, COUNT);
+        fillList(list);
         long endNanoTime = getCurrentNanoTime();
         log.info("{} : {} seconds", title, convertToSeconds(endNanoTime - startNanoTime));
     }
