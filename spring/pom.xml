@@ -17,6 +17,7 @@
         <module>autoconfigure</module>
         <module>rest-template-examples</module>
       <module>cache</module>
+        <module>criteria-dto</module>
     </modules>
 
     <artifactId>spring</artifactId>
