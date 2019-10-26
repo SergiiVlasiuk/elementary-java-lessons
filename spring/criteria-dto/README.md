@@ -20,3 +20,9 @@
 ## Related question on this commit:
 
  - [stack overflow question](https://stackoverflow.com/q/58544601/5728095)
+
+#### examples with dto endpoint - solution
+
+ - `curl "http://localhost:8080/verify/criteria/mapping/community/123/dtold"`
+ - `curl "http://localhost:8080/verify/criteria/mapping/community/123/dtold?till=2019-05-13&communityName=myCOm"`
+ - `curl "http://localhost:8080/verify/criteria/mapping/community/123/dtold?from=2018-11-14&till=2019-05-13&communityName=myCOm"`
