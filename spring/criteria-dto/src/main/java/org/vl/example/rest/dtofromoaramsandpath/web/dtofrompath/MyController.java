@@ -20,9 +20,9 @@ public class MyController {
 
     @GetMapping("community/{communityNumber}/default/params")
     public String loadDataByDefaultParameters(@PathVariable("communityNumber") String communityNumber,
-                                            @RequestParam(value = "from", required = false) String from,
-                                            @RequestParam(value = "till", required = false) String till,
-                                            @RequestParam(value = "communityName", required = false) String communityName) {
+                                              @RequestParam(value = "from", required = false) String from,
+                                              @RequestParam(value = "till", required = false) String till,
+                                              @RequestParam(value = "communityName", required = false) String communityName) {
         log.info("received data without converting:\n\tcommunityNumber => {}\n\tfrom => {}\n\ttill => {}\n\tcommunityName => {}",
                 communityNumber, from, till, communityName);
         return new StringBuilder("{")
@@ -35,9 +35,9 @@ public class MyController {
 
     @GetMapping("community/{communityNumber}/converted/params")
     public String loadUsingConvertedParameters(@PathVariable("communityNumber") String communityNumber,
-                                             @RequestParam(value = "from") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
-                                             @RequestParam("till") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate till,
-                                             @RequestParam(value = "communityName", required = false) String communityName) {
+                                               @RequestParam(value = "from") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate from,
+                                               @RequestParam("till") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate till,
+                                               @RequestParam(value = "communityName", required = false) String communityName) {
         log.info("received data with LocalDate converting:\n\tcommunityNumber => {}\n\tfrom => {}\n\ttill => {}\n\tcommunityName => {}",
                 communityNumber, from, till, communityName);
         return new StringBuilder("{")
