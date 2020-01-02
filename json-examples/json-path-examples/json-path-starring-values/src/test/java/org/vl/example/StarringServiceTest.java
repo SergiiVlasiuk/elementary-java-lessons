@@ -54,7 +54,7 @@ public class StarringServiceTest {
 
     @Test
     public void flexibleMaskingSensitiveData_correctJsonButNoMatching() {
-        String expected = "\"user\":{\"id\":2,\"role\":\"user\"}";
+        String expected = "{\"user\":{\"id\":2,\"role\":\"user\"}}";
 
         String actual = testee.flexibleMaskingSensitiveData(expected);
 

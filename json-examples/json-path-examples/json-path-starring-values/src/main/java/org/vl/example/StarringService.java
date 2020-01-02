@@ -19,7 +19,7 @@ public class StarringService {
             .mappingProvider(new JacksonMappingProvider())
             .options(
                     newHashSet(
-                            Option.DEFAULT_PATH_LEAF_TO_NULL,
+//                            Option.DEFAULT_PATH_LEAF_TO_NULL,
                             Option.SUPPRESS_EXCEPTIONS)
             )
             .build();
