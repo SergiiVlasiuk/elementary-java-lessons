@@ -1,8 +1,6 @@
 package org.vl.example;
 
 import com.jayway.jsonpath.*;
-import com.jayway.jsonpath.spi.json.JacksonJsonNodeJsonProvider;
-import com.jayway.jsonpath.spi.mapper.JacksonMappingProvider;
 import org.apache.commons.lang3.StringUtils;
 
 import java.util.List;
@@ -15,8 +13,8 @@ public class StarringService {
 
     private static final Configuration CONFIGURATION = Configuration
             .builder()
-            .jsonProvider(new JacksonJsonNodeJsonProvider())
-            .mappingProvider(new JacksonMappingProvider())
+//            .jsonProvider(new JacksonJsonNodeJsonProvider())
+//            .mappingProvider(new JacksonMappingProvider())
             .options(
                     newHashSet(
 //                            Option.DEFAULT_PATH_LEAF_TO_NULL,
