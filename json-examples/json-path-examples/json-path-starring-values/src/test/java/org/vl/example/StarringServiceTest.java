@@ -1,5 +1,10 @@
 package org.vl.example;
 
+import com.jayway.jsonpath.Configuration;
+import com.jayway.jsonpath.DocumentContext;
+import com.jayway.jsonpath.JsonPath;
+import com.jayway.jsonpath.Option;
+import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -8,6 +13,7 @@ import org.mockito.junit.MockitoJUnitRunner;
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
+@Slf4j
 public class StarringServiceTest {
 
     @InjectMocks
@@ -68,5 +74,56 @@ public class StarringServiceTest {
         String actual = testee.flexibleMaskingSensitiveData(expected);
 
         assertThat(actual).isEqualToIgnoringWhitespace(expected);
+    }
+
+    @Test
+    public void exampleToReplaceSingleElement() {
+        String json = "{\n" +
+                "  \"Added\": {\n" +
+                "    \"type\": \"K\",\n" +
+                "    \"newmem\": {\n" +
+                "      \"IDNew\": {\n" +
+                "        \"id\": \"777709\",\n" +
+                "        \"type\": \"LOP\"\n" +
+                "      },\n" +
+                "      \"birthDate\": \"2000-12-09\"\n" +
+                "    },\n" +
+                "    \"code\": \"\",\n" +
+                "    \"newest\": {\n" +
+                "      \"curlNew\": \"\",\n" +
+                "      \"addedForNew\": \"\"\n" +
+                "    }\n" +
+                "  }\n" +
+                "}";
+        String expectedId = "12345678";
+        String expectedJson = "{\n" +
+                "  \"Added\": {\n" +
+                "    \"type\": \"K\",\n" +
+                "    \"newmem\": {\n" +
+                "      \"IDNew\": {\n" +
+                "        \"id\": \"12345678\",\n" +
+                "        \"type\": \"LOP\"\n" +
+                "      },\n" +
+                "      \"birthDate\": \"2000-12-09\"\n" +
+                "    },\n" +
+                "    \"code\": \"\",\n" +
+                "    \"newest\": {\n" +
+                "      \"curlNew\": \"\",\n" +
+                "      \"addedForNew\": \"\"\n" +
+                "    }\n" +
+                "  }\n" +
+                "}";
+
+        Configuration configuration = Configuration
+                .builder()
+                .options(Option.SUPPRESS_EXCEPTIONS)
+                .build();
+        DocumentContext parsed = JsonPath.using(configuration).parse(json);
+
+        parsed.set("$.Added.newmem.IDNew.id", expectedId);
+
+        String actual = parsed.jsonString();
+        log.info("After ID value updated: {}", actual);
+        assertThat(actual).isEqualToIgnoringWhitespace(expectedJson);
     }
 }
