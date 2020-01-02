@@ -10,6 +10,9 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.junit.MockitoJUnitRunner;
 
+import java.io.File;
+import java.io.IOException;
+
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(MockitoJUnitRunner.class)
@@ -123,6 +126,42 @@ public class StarringServiceTest {
         parsed.set("$.Added.newmem.IDNew.id", expectedId);
 
         String actual = parsed.jsonString();
+        log.info("After ID value updated: {}", actual);
+        assertThat(actual).isEqualToIgnoringWhitespace(expectedJson);
+    }
+
+    @Test
+    public void exampleToReplaceSingleElement_jsonTakenFromFile() throws IOException {
+        String expectedId = "12345678";
+        String expectedJson = "{\n" +
+                "  \"Added\": {\n" +
+                "    \"type\": \"K\",\n" +
+                "    \"newmem\": {\n" +
+                "      \"IDNew\": {\n" +
+                "        \"id\": \"12345678\",\n" +
+                "        \"type\": \"LOP\"\n" +
+                "      },\n" +
+                "      \"birthDate\": \"2000-12-09\"\n" +
+                "    },\n" +
+                "    \"code\": \"\",\n" +
+                "    \"newest\": {\n" +
+                "      \"curlNew\": \"\",\n" +
+                "      \"addedForNew\": \"\"\n" +
+                "    }\n" +
+                "  }\n" +
+                "}";
+
+        Configuration configuration = Configuration
+                .builder()
+                .options(Option.SUPPRESS_EXCEPTIONS)
+                .build();
+        File json = new File("src/test/resources/test.json");
+        System.out.println(json.getAbsolutePath());
+        DocumentContext parsed = JsonPath.using(configuration).parse(json);
+
+        parsed.set("$.Added.newmem.IDNew.id", expectedId);
+        String actual = parsed.jsonString();
+
         log.info("After ID value updated: {}", actual);
         assertThat(actual).isEqualToIgnoringWhitespace(expectedJson);
     }
