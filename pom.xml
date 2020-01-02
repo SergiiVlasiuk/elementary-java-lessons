@@ -11,6 +11,7 @@
         <module>spring</module>
         <module>javacore</module>
         <module>algorithms</module>
+        <module>json-examples</module>
     </modules>
     <name>training</name>
     <description>Demo project for Spring Boot</description>
