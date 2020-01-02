@@ -35,12 +35,9 @@ public class StarringService {
 
     public String flexibleMaskingSensitiveData(String asJson) {
         DocumentContext parsed = JsonPath.using(CONFIGURATION).parse(asJson);
-        PATHS_TO_REPLACE.forEach(path -> replaceNodeValue(parsed, path));
+        PATHS_TO_REPLACE.forEach(path -> parsed.map(path,
+                (currentValue, conf) -> starringCurrentValue(currentValue)));
         return parsed.jsonString();
-    }
-
-    private DocumentContext replaceNodeValue(DocumentContext parsed, String path) {
-        return parsed.map(path, (currentValue, conf) -> starringCurrentValue(currentValue));
     }
 
     private Object starringCurrentValue(Object currentValue) {
