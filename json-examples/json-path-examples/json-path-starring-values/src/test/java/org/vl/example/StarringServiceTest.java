@@ -35,6 +35,15 @@ public class StarringServiceTest {
     }
 
     @Test
+    public void maskSensitiveData_correctJsonButNoMatching() {
+        String expected = "{\"user\":{\"id\":2,\"role\":\"user\"}}";
+
+        String actual = testee.maskSensitiveData(expected);
+
+        assertThat(actual).isEqualToIgnoringWhitespace(expected);
+    }
+
+    @Test
     public void flexibleMaskingSensitiveData() {
         String json = "{\"name\":\"anyName\",\"email\":\"any@ukr.net\",\"colleagues\":["
                 + "{\"id\":1, \"email\":\"tor@ukr.net\"}"
