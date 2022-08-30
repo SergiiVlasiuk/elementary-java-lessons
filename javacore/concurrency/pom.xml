@@ -18,6 +18,7 @@
         <module>ForkJoinPool</module>
         <module>readwritelock</module>
         <module>reentrantlock</module>
+        <module>callable</module>
     </modules>
 
 </project>
